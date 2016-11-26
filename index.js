@@ -1,3 +1,5 @@
+var defaultType = "leaderboard";
+
 var lastId = undefined;
 var refreshAt = undefined;
 
@@ -122,7 +124,7 @@ var createEntry = function(display, entry) {
 };
 
 var statsUrl = function() {
-    var type = "leaderboard";
+    var type = defaultType;
     if(window.location.search.length) {
         var type = "leaderboard_" + window.location.search.substring(1);
     }
